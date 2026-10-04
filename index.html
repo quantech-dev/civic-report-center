@@ -1,0 +1,436 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Report a scam and get clear next steps. Free to use.">
+<title>Civic Report Center</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;600&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:#fff}
+@media (prefers-color-scheme:dark){html:not([data-theme="light"]) body{background:#0b1424}}
+html[data-theme="dark"] body{background:#0b1424}
+.view[hidden]{display:none}
+#v-home{--navy:#0f2a5c;--navy2:#1b3d82;--sky:#e8f1fb;--sky2:#d3e4f7;--ink:#13233f;--mut:#51607a;--bg:#fff;--card:#fff;--line:#d5e0ee;--gold:#c9a227;--onnavy:#fff}
+@media (prefers-color-scheme:dark){html:not([data-theme="light"]) #v-home{--navy:#8db4f2;--navy2:#a9c6f6;--sky:#13213b;--sky2:#1a2d50;--ink:#e6edf8;--mut:#a3b2cc;--bg:#0b1424;--card:#111e36;--line:#243659;--onnavy:#0b1424}}
+html[data-theme="dark"] #v-home{--navy:#8db4f2;--navy2:#a9c6f6;--sky:#13213b;--sky2:#1a2d50;--ink:#e6edf8;--mut:#a3b2cc;--bg:#0b1424;--card:#111e36;--line:#243659;--onnavy:#0b1424}
+#v-home *{box-sizing:border-box}
+#v-home{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif}
+#v-home h1,#v-home h2,#v-home h3{font-family:"Source Serif 4",Georgia,serif;line-height:1.15;margin:0;color:var(--navy)}
+#v-home a{color:inherit}
+#v-home .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+#v-home header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+#v-home .bar{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+#v-home .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 22px "Source Serif 4",serif;color:var(--navy)}
+#v-home .logo svg{width:34px;height:34px}
+#v-home .logo small{display:block;font:500 10px Inter,sans-serif;color:var(--mut);letter-spacing:.02em}
+#v-home nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:500}
+#v-home nav a{text-decoration:none;color:var(--ink)}
+#v-home nav a:hover{color:var(--navy2)}
+#v-home .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:6px;font-weight:600;font-size:15px;text-decoration:none;border:2px solid var(--navy);cursor:pointer}
+#v-home .btn.pri{background:var(--navy);color:var(--bg)}
+#v-home .btn.sec{background:transparent;color:var(--navy)}
+#v-home .btn:focus-visible,#v-home a:focus-visible,#v-home button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+#v-home .menu{display:none;background:none;border:1px solid var(--line);border-radius:6px;width:44px;height:44px;color:var(--navy);font-size:22px}
+#v-home .hero{background:linear-gradient(135deg,var(--sky),var(--sky2));padding:64px 0}
+#v-home .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+#v-home .hero p.lead{font-size:18px;color:var(--mut);max-width:560px;margin:18px 0 28px}
+#v-home .hero h1{font-size:clamp(34px,5vw,54px);letter-spacing:-.01em}
+#v-home .cta{display:flex;gap:12px;flex-wrap:wrap}
+#v-home .panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:28px;box-shadow:0 10px 30px rgba(15,42,92,.12)}
+#v-home .panel h3{font-size:20px;margin-bottom:12px}
+#v-home .panel ul{margin:0;padding:0;list-style:none;display:grid;gap:12px;font-size:15px}
+#v-home .panel li{display:flex;gap:10px}
+#v-home .panel li:before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 6.2l2 2 4-4.4' fill='none' stroke='white' stroke-width='1.6'/%3E%3C/svg%3E") center/12px no-repeat}
+#v-home .trust{border-bottom:1px solid var(--line)}
+#v-home .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:22px 20px}
+#v-home .t{display:flex;gap:12px;align-items:center;font-size:14px}
+#v-home .t b{display:block;color:var(--navy);font-size:15px}
+#v-home .t span{color:var(--mut)}
+#v-home .ic{flex:none;width:40px;height:40px;border-radius:50%;background:var(--sky);display:grid;place-items:center;color:var(--navy);font-size:18px}
+#v-home section{padding:64px 0}
+#v-home .eyebrow{color:var(--navy2);font-weight:600;font-size:14px;margin-bottom:6px}
+#v-home section h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:10px}
+#v-home .sub{color:var(--mut);max-width:620px;margin:0 0 36px}
+#v-home .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s;margin:0;padding:0;list-style:none}
+#v-home .steps li{position:relative;text-align:center;padding:0 6px}
+#v-home .steps li:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:56px;height:56px;margin:0 auto 14px;border-radius:50%;background:var(--sky);border:2px solid var(--navy);color:var(--navy);font:700 20px "Source Serif 4",serif;position:relative;z-index:1}
+#v-home .steps li:not(:last-child):after{content:"";position:absolute;top:28px;left:calc(50% + 34px);right:calc(-50% + 34px);border-top:2px dashed var(--line)}
+#v-home .steps h3{font-size:18px;margin-bottom:6px}
+#v-home .steps p{margin:0;font-size:14px;color:var(--mut)}
+#v-home .alt{background:var(--sky)}
+#v-home .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+#v-home .card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px}
+#v-home .card h3{font-size:17px;margin:10px 0 4px}
+#v-home .card p{margin:0;font-size:14px;color:var(--mut)}
+#v-home .scams .card{display:flex;gap:14px;align-items:flex-start}
+#v-home .scams .card h3{margin-top:0}
+#v-home .band{background:var(--navy);color:var(--onnavy);text-align:center;padding:48px 0}
+#v-home .band h2{color:inherit}
+#v-home .band p{max-width:620px;margin:10px auto 22px;opacity:.9}
+#v-home .band .btn{background:#fff;color:#0f2a5c;border-color:#fff}
+#v-home footer{padding:36px 0;font-size:13px;color:var(--mut);border-top:1px solid var(--line)}
+#v-home footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+#v-home footer p{margin:0;max-width:640px}
+#v-home footer a{color:var(--navy2)}
+#v-home footer .disc-l{flex-basis:100%;max-width:none}
+@media (max-width:960px){#v-home .hero .wrap{grid-template-columns:1fr}
+#v-home .grid3{grid-template-columns:repeat(2,1fr)}
+#v-home .trust .wrap{grid-template-columns:repeat(2,1fr)}
+#v-home .steps{grid-template-columns:1fr;gap:20px}
+#v-home .steps li{display:grid;grid-template-columns:56px 1fr;gap:0 16px;text-align:left}
+#v-home .steps li:before{grid-row:span 2;margin:0}
+#v-home .steps li:after{display:none}
+#v-home nav{display:none;position:absolute;left:0;right:0;top:68px;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 20px}
+#v-home nav.open{display:block}
+#v-home nav ul{flex-direction:column;gap:4px}
+#v-home nav a{display:block;padding:12px 0}
+#v-home .menu{display:block}
+#v-home .bar>.btn{display:none}}
+@media (max-width:600px){#v-home .grid3{grid-template-columns:1fr}
+#v-home .hero{padding:40px 0}
+#v-home section{padding:44px 0}
+#v-home .cta .btn{width:100%;justify-content:center}
+#v-home .logo small{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ---------- report view ---------- */
+#v-report{--navy:#0B2D5B;--navy2:#143F7A;--blue:#1B54B5;--bg:#F3F6FB;--card:#fff;--ink:#10264A;--muted:#5B6B86;--line:#C9D5E8;--soft:#EAF1FB;--err:#B3261E;--ok:#1B7556;--okbg:#E4F3EC;--btn:#0B2D5B;--sel:#E3EDFC;
+--nb:#DCE8FB;--nt:#12408F;--ib:#FFF0CC;--it:#7A5200;--cb:#DDF2E8;--ct:#14614A;--xb:#E6E9EF;--xt:#46526A}
+@media (prefers-color-scheme:dark){html:not([data-theme="light"]) #v-report{--bg:#0A1424;--card:#12233C;--ink:#E8EEF8;--muted:#9FAEC8;--line:#2B4163;--soft:#182E4D;--blue:#7FAEFF;--err:#FF8A80;--ok:#62D0A0;--okbg:#12352A;--btn:#2A5FB8;--sel:#1B3558;--nb:#1B3A6B;--nt:#BCD4FF;--ib:#4A3B0E;--it:#FFD98A;--cb:#12392C;--ct:#8FE0BC;--xb:#26344D;--xt:#C2CCDE}}
+html[data-theme="dark"] #v-report{--bg:#0A1424;--card:#12233C;--ink:#E8EEF8;--muted:#9FAEC8;--line:#2B4163;--soft:#182E4D;--blue:#7FAEFF;--err:#FF8A80;--ok:#62D0A0;--okbg:#12352A;--btn:#2A5FB8;--sel:#1B3558;--nb:#1B3A6B;--nt:#BCD4FF;--ib:#4A3B0E;--it:#FFD98A;--cb:#12392C;--ct:#8FE0BC;--xb:#26344D;--xt:#C2CCDE}
+#v-report *{box-sizing:border-box}
+#v-report{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.5 "Source Sans 3",system-ui,sans-serif;min-height:100vh}
+#v-report svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.hd{background:#0B2D5B;color:#fff;border-bottom:1px solid #4a6a9c}
+.hd .in{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:14px}
+.hd .logo{width:46px;height:46px;border-radius:50%;border:2px solid #E8B64B;display:grid;place-items:center;color:#E8B64B;flex:none}
+.hd .logo svg{width:24px;height:24px}
+.bn{font:700 28px/1 "Source Serif 4",Georgia,serif}
+.tg{font-size:12px;letter-spacing:.05em;text-transform:uppercase;opacity:.9;margin-top:4px}
+.hd .mn{margin-left:auto;color:#fff;padding:6px;text-decoration:none;font-size:16px;font-weight:600}
+#v-report .hero{background:linear-gradient(135deg,#0B2D5B 0%,#143F7A 100%);color:#fff}
+#v-report .hero .in{max-width:980px;margin:0 auto;padding:30px 20px 26px}
+#v-report .lab{font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+#v-report h1{font:700 40px/1.15 "Source Serif 4",Georgia,serif;margin:0 0 14px;max-width:18ch}
+#v-report .hero p.l{font-size:19px;max-width:48ch;margin:0 0 24px}
+#v-report .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+#v-report .trust div{display:flex;gap:12px;align-items:center;font-size:15px;line-height:1.3}
+#v-report .trust .c{width:46px;height:46px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center;flex:none}
+#v-report .trust svg{width:22px;height:22px}
+#v-report .card{max-width:900px;margin:-1px auto 0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;position:relative;top:22px;box-shadow:0 2px 10px rgba(11,45,91,.08)}
+#v-report .wrapc{padding:0 16px}
+#v-report h2{font:700 30px/1.2 "Source Serif 4",Georgia,serif;margin:0 0 6px}
+#v-report .sub{color:var(--muted);margin:0 0 22px;font-size:18px}
+#v-report .g{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+#v-report .f{display:block}
+#v-report .full{grid-column:1/-1}
+#v-report .t{display:block;font-weight:600;margin-bottom:6px;font-size:16px}
+#v-report .t i{color:#C0392B;font-style:normal}
+#v-report .t span{font-weight:400;color:var(--muted)}
+#v-report .hint{color:var(--muted);font-size:15px;margin:6px 0 0}
+#v-report .w{position:relative}
+#v-report .w>svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--navy2);pointer-events:none}
+html[data-theme="dark"] #v-report .w>svg{color:var(--blue)}
+#v-report .w.ta>svg{top:20px;transform:none}
+#v-report input[type=text],#v-report input[type=email],#v-report input[type=tel],#v-report select,#v-report textarea{width:100%;padding:13px 14px 13px 46px;font:inherit;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:8px}
+#v-report select{appearance:none}
+#v-report textarea{min-height:110px;resize:vertical}
+#v-report input:focus,#v-report select:focus,#v-report textarea:focus,#v-report button:focus-visible,#v-report .drop:focus-within{outline:3px solid var(--blue);outline-offset:1px}
+#v-report [aria-invalid=true]{border-color:var(--err)!important}
+#v-report .e{color:var(--err);font-size:14px;margin:5px 0 0}
+#v-report .drop{display:flex;gap:14px;align-items:center;justify-content:center;border:1.5px dashed var(--line);background:var(--soft);border-radius:8px;padding:18px;cursor:pointer;text-align:left}
+#v-report .drop svg{width:34px;height:34px;color:var(--navy2)}
+#v-report .drop b{display:block;font-weight:600;font-size:15px}
+#v-report .drop small{color:var(--muted);font-size:15px}
+#v-report .drop input{position:absolute;opacity:0;width:1px;height:1px}
+#v-report .cons{display:flex;gap:12px;align-items:flex-start;margin:22px 0}
+#v-report .cons input{width:22px;height:22px;margin-top:3px;accent-color:var(--blue);flex:none}
+#v-report .cons b{display:block;font-weight:600}
+#v-report .cons small{color:var(--muted);font-size:15px;display:block}
+#v-report .sb{width:100%;display:flex;gap:12px;justify-content:center;align-items:center;background:var(--btn);color:#fff;border:0;border-radius:10px;padding:17px;font:600 19px "Source Sans 3",system-ui,sans-serif;cursor:pointer}
+#v-report .sb[disabled]{opacity:.7;cursor:progress}
+#v-report .fail{background:#FDECEA;color:#8A1C14;border-radius:8px;padding:12px 14px;margin:0 0 14px;font-size:16px}
+html[data-theme="dark"] #v-report .fail{background:#3A1614;color:#FFB4AB}
+@media (prefers-color-scheme:dark){html:not([data-theme="light"]) #v-report .fail{background:#3A1614;color:#FFB4AB}}
+#v-report .ok{text-align:center;padding:14px 0}
+#v-report .tick{width:68px;height:68px;border-radius:50%;background:var(--okbg);color:var(--ok);display:grid;place-items:center;font-size:34px;margin:0 auto 14px}
+#v-report .msg{font:600 22px/1.45 "Source Serif 4",Georgia,serif;max-width:30ch;margin:0 auto 20px}
+#v-report .tg2{background:var(--soft);padding:62px 20px 28px;margin-top:-22px}
+#v-report .tg2 .in{max-width:900px;margin:0 auto;display:flex;gap:14px;align-items:center;justify-content:center}
+#v-report .tg2 svg{width:36px;height:36px;color:var(--navy2);flex:none}
+html[data-theme="dark"] #v-report .tg2 svg{color:var(--blue)}
+#v-report .tg2 h3{font:700 24px "Source Serif 4",Georgia,serif;margin:0}
+#v-report .tg2 p{margin:2px 0 0;color:var(--muted);max-width:52ch}
+.ft{background:#0B2D5B;color:#fff}
+.ft .in{max-width:980px;margin:0 auto;padding:20px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.ft .bn{font-size:22px}
+.ft .tg{font-size:11px}
+.ft nav{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
+.ft a{color:#fff;text-decoration:none}
+.ft .disc{flex-basis:100%;font-size:13px;opacity:.85;margin:0}
+.ft .disc{flex-basis:100%;font-size:13px;opacity:.85;margin:0}
+@media (max-width:640px){#v-report h1{font-size:32px}
+#v-report .g{grid-template-columns:1fr}
+#v-report .trust{grid-template-columns:1fr}
+#v-report .card{padding:20px}
+.bn{font-size:20px}
+.tg{font-size:10px}
+#v-report .tg2 .in{align-items:flex-start}}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+</head>
+<body>
+<div style="background:#FFF0CC;color:#5a3d00;text-align:center;padding:8px 16px;font:500 14px/1.4 system-ui,sans-serif">Preview only. Reports are not sent from this preview; they will be once the site is hosted.</div>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="s-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="s-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></symbol>
+<symbol id="s-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-5.5 6.5-5.5s6.5 2 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14.5c2.5 0 4.5 1.5 4.5 4.5"/></symbol>
+<symbol id="s-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
+<symbol id="s-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+<symbol id="s-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="s-dollar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9c-.5-1-1.5-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.8 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 6v1.5M12 16.5V18"/></symbol>
+<symbol id="s-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
+<symbol id="s-up" viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 01-.5-9A6 6 0 0118 10a4 4 0 010 8"/><path d="M12 12v8M9 15l3-3 3 3"/></symbol>
+<symbol id="s-send" viewBox="0 0 24 24"><path d="M21 3L3 11l7 3 3 7z"/><path d="M10 14l11-11"/></symbol>
+<symbol id="s-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<!-- ================= HOME ================= -->
+<div class="view" id="v-home">
+<header>
+<div class="wrap bar">
+<a class="logo" href="#top" aria-label="Civic Report Center home">
+<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3l15 6v10c0 9-6 15-15 18C11 34 5 28 5 19V9z" fill="currentColor"/><path d="M13 20l5 5 9-10" fill="none" stroke="#fff" stroke-width="3"/></svg>
+<span>Civic Report Center<small>Scam report assistance</small></span></a>
+<nav id="nav" aria-label="Main"><ul>
+<li><a href="#how">How it works</a></li><li><a href="#scams">Types of scams</a></li><li><a href="about.html">About us</a></li><li><a href="#faq">Help now</a></li></ul></nav>
+<a class="btn pri" href="#/report">Report a scam</a>
+<button class="menu" id="menu" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+</div>
+</header>
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Report a scam and get clear next steps.</h1>
+<p class="lead">If you have been targeted by online fraud, tell us what happened. Our team reviews every report and points you to the right people, such as your bank, the FTC and the police. You do not pay anything to submit a report.</p>
+<div class="cta"><a class="btn pri" href="#/report">Report a scam</a><a class="btn sec" href="#how">See how it works</a></div>
+</div>
+<aside class="panel" id="faq" aria-labelledby="urgent">
+<h3 id="urgent">Do this first if money just left your account</h3>
+<ul>
+<li>Call your bank or card issuer and ask them to stop or reverse the payment.</li>
+<li>Stop replying to the scammer and do not send more money.</li>
+<li>Change passwords on any account you shared, starting with email.</li>
+<li>Keep screenshots, receipts and messages. You can add them to your report.</li>
+</ul></aside>
+</div></div>
+
+<div class="trust"><div class="wrap">
+<div class="t"><div class="ic">&#128274;</div><div><b>Private</b><span>Only our team can read reports</span></div></div>
+<div class="t"><div class="ic">&#128100;</div><div><b>Reviewed by people</b><span>Not automated replies</span></div></div>
+<div class="t"><div class="ic">&#128176;</div><div><b>No fees</b><span>We never ask for payment</span></div></div>
+<div class="t"><div class="ic">&#129517;</div><div><b>Clear referrals</b><span>Guidance on where to go next</span></div></div>
+</div></div>
+
+<section id="how"><div class="wrap">
+<div class="eyebrow">Simple steps</div>
+<h2>How reporting works</h2>
+<p class="sub">Five steps from your report to a clear plan. We cannot promise to recover money, but we will tell you honestly what your options are.</p>
+<ol class="steps">
+<li><h3>File a report</h3><p>Tell us what happened and add any evidence you have.</p></li>
+<li><h3>Case review</h3><p>A team member reads your report and checks the details.</p></li>
+<li><h3>Follow-up</h3><p>We contact you if we need more information.</p></li>
+<li><h3>Next steps</h3><p>We explain your options and which agencies or banks to contact.</p></li>
+<li><h3>Updates</h3><p>You hear from us about the status of your report.</p></li>
+</ol>
+<p style="margin-top:32px"><a class="btn pri" href="#/report">Report a scam</a></p>
+</div></section>
+
+<section class="alt" id="why"><div class="wrap">
+<div class="eyebrow">Our approach</div>
+<h2>Built for people who are stressed</h2>
+<p class="sub">Being scammed is not your fault. We keep the process short, the language plain and your information protected.</p>
+<div class="grid3">
+<div class="card"><div class="ic">&#128737;</div><h3>Private by design</h3><p>Reports go straight to our review team. Other reporters can never see them.</p></div>
+<div class="card"><div class="ic">&#128172;</div><h3>Plain language</h3><p>No jargon. Short questions you can answer on a phone.</p></div>
+<div class="card"><div class="ic">&#128221;</div><h3>Only what we need</h3><p>We never ask for full card numbers, passwords or government ID numbers.</p></div>
+<div class="card"><div class="ic">&#128279;</div><h3>Right referrals</h3><p>Links to the FTC, IC3, your bank and local police when they apply.</p></div>
+<div class="card"><div class="ic">&#9201;</div><h3>About five minutes</h3><p>A single short form. Answer what you can.</p></div>
+<div class="card"><div class="ic">&#128241;</div><h3>Works on any device</h3><p>Large buttons and readable text on phone, tablet and desktop.</p></div>
+</div></div></section>
+
+<section class="scams" id="scams"><div class="wrap">
+<div class="eyebrow">Common scam types</div>
+<h2>What kind of scam was it?</h2>
+<p class="sub">Not sure which one fits? That is fine. Choose the closest, or tell us in your own words.</p>
+<div class="grid3">
+<div class="card"><div class="ic">&#128200;</div><div><h3>Investment scams</h3><p>Fake trading, crypto or high-yield schemes.</p></div></div>
+<div class="card"><div class="ic">&#127907;</div><div><h3>Phishing</h3><p>Fake emails, texts and websites that steal logins.</p></div></div>
+<div class="card"><div class="ic">&#128188;</div><div><h3>Business email compromise</h3><p>Fake invoices and payment-change requests.</p></div></div>
+<div class="card"><div class="ic">&#10084;</div><div><h3>Romance scams</h3><p>Someone online builds a relationship, then asks for money.</p></div></div>
+<div class="card"><div class="ic">&#127873;</div><div><h3>Lottery and prize scams</h3><p>Fake winnings that require a fee to collect.</p></div></div>
+<div class="card"><div class="ic">&#128295;</div><div><h3>Tech support scams</h3><p>Fake agents asking for remote access or payment.</p></div></div>
+</div></div></section>
+
+<div class="band"><div class="wrap">
+<h2>Ready to report what happened?</h2>
+<p>It takes about five minutes, and you do not pay anything to submit a report.</p>
+<a class="btn" href="#/report">Start a report</a>
+</div></div>
+</main>
+<footer><div class="wrap">
+<p class="disc-l"><span data-disc></span></p>
+<p>&copy; 2026 Civic Report Center (CRC) &middot; <a href="about.html">About us</a> &middot; <a href="privacy.html">Privacy</a></p>
+</div></footer>
+</div>
+
+<!-- ================= REPORT ================= -->
+<div class="view" id="v-report" hidden>
+<header class="hd"><div class="in">
+<div class="logo"><svg class="i"><use href="#s-shield"/></svg></div>
+<div><div class="bn">Civic Report Center</div><div class="tg">Scam report assistance</div></div>
+<a class="mn" href="#/" aria-label="Back to home">Home</a>
+</div></header>
+
+<section class="hero"><div class="in">
+<p class="lab">Report a scam</p>
+<h1>Tell us what happened</h1>
+<p class="l">Have you been scammed? Share your information with us. Our team will review your case and contact you directly with next steps.</p>
+<div class="trust">
+<div><span class="c"><svg class="i"><use href="#s-shield"/></svg></span>Only our review team can read your report</div>
+<div><span class="c"><svg class="i"><use href="#s-users"/></svg></span>A person reads every report</div>
+<div><span class="c"><svg class="i"><use href="#s-phone"/></svg></span>We aim to contact you within 24&ndash;48 hours</div>
+</div></div></section>
+
+<div class="wrapc"><main class="card" id="card">
+<form id="f" novalidate>
+<h2>Report Your Scam</h2>
+<p class="sub">Fill out the form below with as much detail as you can. It only takes a few minutes.</p>
+<div class="g">
+<div class="f"><label class="t" for="name">Full Name <i>*</i></label><div class="w"><svg class="i"><use href="#s-user"/></svg><input type="text" id="name" placeholder="Enter your full name" autocomplete="name" required maxlength="120"></div><p class="e" hidden>Enter your full name.</p></div>
+<div class="f"><label class="t" for="phone">Phone Number <i>*</i></label><div class="w"><svg class="i"><use href="#s-phone"/></svg><input type="tel" id="phone" placeholder="e.g. +1 (555) 123-4567" autocomplete="tel" required maxlength="40"></div><p class="e" hidden>Enter a phone number we can reach you on.</p></div>
+<div class="f"><label class="t" for="email">Email Address <i>*</i></label><div class="w"><svg class="i"><use href="#s-mail"/></svg><input type="email" id="email" placeholder="Enter your email address" autocomplete="email" required maxlength="160"></div><p class="e" hidden>Enter a valid email address, like name@example.com.</p></div>
+<div class="f"><label class="t" for="city">City / State <i>*</i></label><div class="w"><svg class="i"><use href="#s-pin"/></svg><input type="text" id="city" placeholder="City, State" autocomplete="address-level2" required maxlength="120"></div><p class="e" hidden>Enter your city and state.</p></div>
+<div class="f"><label class="t" for="type">Type of Scam <i>*</i></label><div class="w"><svg class="i"><use href="#s-shield"/></svg><select id="type" required><option value="">Select scam type</option><option>Investment or crypto scam</option><option>Romance scam</option><option>Phishing email or text</option><option>Fake tech support</option><option>Online shopping scam</option><option>Impersonation of a company or official</option><option>Something else</option></select></div><p class="e" hidden>Choose the type that fits best.</p></div>
+<div class="f"><label class="t" for="amt">Approximate Amount Lost (USD) <i>*</i></label><div class="w"><svg class="i"><use href="#s-dollar"/></svg><input type="text" id="amt" inputmode="decimal" placeholder="e.g. $5,000" required maxlength="20"></div><p class="e" hidden>Enter an amount, or 0 if you did not lose money.</p></div>
+<div class="f full"><label class="t" for="desc">Briefly Describe What Happened <i>*</i></label><div class="w ta"><svg class="i"><use href="#s-doc"/></svg><textarea id="desc" placeholder="Tell us what happened, how you were contacted, and any other important details." required maxlength="5000"></textarea></div><p class="hint">Please do not include card numbers, passwords or ID numbers.</p><p class="e" hidden>Tell us briefly what happened.</p></div>
+<div class="f full"><span class="t">Upload Evidence <span>(Optional)</span></span>
+<label class="drop"><svg class="i"><use href="#s-up"/></svg><span><b id="dn">Click to upload or drag and drop</b><small id="ds">Images, screenshots, PDFs (Max 10MB)</small></span><input type="file" id="files" multiple accept="image/*,.pdf"></label>
+<p class="hint">Up to 5 files. Please keep the originals too.</p></div>
+</div>
+<div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="website">Leave this empty</label><input type="text" id="website" tabindex="-1" autocomplete="off"></div>
+<label class="cons"><input type="checkbox" id="c"><span><b>I agree to be contacted by Civic Report Center regarding my report.</b><small>My information will be kept confidential and used only to review my report and contact me.</small><span class="e" id="ce" hidden>Tick the box to send your report.</span></span></label>
+<p class="fail" id="fail" role="alert" hidden></p>
+<button type="button" class="sb" id="go"><svg class="i"><use href="#s-send"/></svg><span id="gol">Submit Report</span><svg class="i"><use href="#s-arrow"/></svg></button>
+</form>
+<div class="ok" id="ok" hidden>
+<div class="tick" aria-hidden="true">&#10003;</div>
+<h2 tabindex="-1" id="oh">Thank you</h2>
+<p class="msg">Your case will be assessed by our team, and we will reach out to you.</p>
+</div>
+</main></div>
+
+<section class="tg2"><div class="in"><svg class="i"><use href="#s-shield"/></svg><div><h3>Together We Can Stop Scams</h3><p>Your report matters. It helps us guide you, and it helps warn others about the same tricks.</p></div></div></section>
+
+<footer class="ft"><div class="in">
+<div style="display:flex;gap:12px;align-items:center"><div class="hd" style="background:none;border:0"><div class="logo" style="width:38px;height:38px"><svg class="i" style="width:20px;height:20px"><use href="#s-shield"/></svg></div></div><div><div class="bn">Civic Report Center</div><div class="tg">Scam report assistance</div></div></div>
+<nav><a href="#/">Home</a><a href="#how">How It Works</a><a href="about.html">About us</a><a href="privacy.html">Privacy</a></nav>
+<p class="disc" data-disc></p>
+</div></footer>
+</div>
+
+<script>(function(){var m=document.getElementById('menu'),n=document.getElementById('nav');
+m.addEventListener('click',function(){var o=n.classList.toggle('open');m.setAttribute('aria-expanded',o)});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');m.setAttribute('aria-expanded',false)}});})();</script>
+
+<script>
+/* ---------- report form ---------- */
+(function(){
+var f=document.getElementById('f'),fi=document.getElementById('files'),busy=false;
+fi.onchange=function(){var n=[].map.call(fi.files,function(x){return x.name}),big=[].some.call(fi.files,function(x){return x.size>10485760});
+document.getElementById('dn').textContent=n.length?n.join(', '):'Click to upload or drag and drop';
+document.getElementById('ds').textContent=big?'One or more files are over 10MB. Please choose smaller files.':'Images, screenshots, PDFs (Max 10MB)'};
+function ok(el){var v=el.value.trim(),bad=!v||(el.type==='email'&&!/^\S+@\S+\.\S+$/.test(v))||(el.id==='amt'&&!/^\$?\s*[\d,]+(\.\d+)?$/.test(v));el.setAttribute('aria-invalid',bad);var e=el.closest('.f').querySelector('.e');e.hidden=!bad;return !bad}
+function val(id){return document.getElementById(id).value.trim()}
+function newRef(){var a=new Uint32Array(1);crypto.getRandomValues(a);return 'CRC-'+String(100000+a[0]%900000)}
+function fail(msg){var p=document.getElementById('fail');p.textContent=msg;p.hidden=false;p.scrollIntoView({block:'center'})}
+function safe(n){return n.replace(/[^A-Za-z0-9._-]+/g,'_').slice(-80)||'file'}
+async function send(rec){
+  if(!window.supabase)throw{code:'offline'};
+  var sb=window.crcSb||(window.crcSb=window.supabase.createClient(CRC_URL,CRC_KEY,{auth:{persistSession:false}}));
+  for(var attempt=0;attempt<3;attempt++){
+    var ev=[];
+    for(var i=0;i<rec.files.length;i++){var file=rec.files[i];
+      var path=rec.ref+'/'+(i+1)+'-'+safe(file.name);
+      var up=await sb.storage.from('evidence').upload(path,file,{upsert:false,contentType:file.type||'application/octet-stream'});
+      if(up.error)throw{code:'upload',message:up.error.message};
+      ev.push({path:path,name:file.name.slice(0,200),size:file.size})}
+    var row={ref:rec.ref,name:rec.name,phone:rec.phone,email:rec.email,city:rec.city,scam_type:rec.type,amount:rec.amount,description:rec.desc,evidence:ev,consent:true};
+    var r=await sb.from('reports').insert(row);
+    if(!r.error)return;
+    if(r.error.code==='23505'){rec.ref=newRef();continue}
+    if(/rate_limited/.test(r.error.message||''))throw{code:'rate'};
+    throw{code:'db',message:r.error.message};
+  }
+  throw{code:'db'};
+}
+document.getElementById('go').onclick=async function(){
+  if(busy)return;
+  document.getElementById('fail').hidden=true;
+  var all=true;[].forEach.call(f.querySelectorAll('[required]'),function(el){if(!ok(el))all=false});
+  var c=document.getElementById('c');document.getElementById('ce').hidden=c.checked;
+  if(!all||!c.checked){var b=f.querySelector('[aria-invalid=true]');if(b)b.focus();return}
+  var rec={ref:newRef(),name:val('name'),phone:val('phone'),email:val('email'),city:val('city'),type:val('type'),
+    amount:Number(val('amt').replace(/[$,\s]/g,''))||0,desc:val('desc'),
+    files:[].slice.call(fi.files,0,5)};
+  if(document.getElementById('website').value){f.hidden=true;document.getElementById('ok').hidden=false;return}
+  if(rec.files.some(function(x){return x.size>10485760})){fail('One or more files are over 10MB. Please choose smaller files.');return}
+  busy=true;var btn=document.getElementById('go');btn.disabled=true;document.getElementById('gol').textContent='Sending…';
+  try{await send(rec);
+    f.hidden=true;document.getElementById('ok').hidden=false;document.getElementById('card').scrollIntoView();document.getElementById('oh').focus();
+  }catch(e){
+    var code=e&&e.code;
+    if(code==='rate')fail('We have received several reports from this connection recently. Please wait an hour and try again, or contact us directly.');
+    else if(code==='upload')fail('We could not upload one of your files. Only images and PDFs under 10MB are accepted. Remove the file and try again.');
+    else if(code==='offline')fail('We could not reach our servers. Check your internet connection and try again.');
+    else fail('Something went wrong while sending your report. Your answers are still here. Please try again in a moment.');
+  }finally{busy=false;btn.disabled=false;document.getElementById('gol').textContent='Submit Report'}
+};
+window.crcResetForm=function(){var o=document.getElementById('ok');if(o.hidden)return;f.reset();f.hidden=false;o.hidden=true;document.getElementById('fail').hidden=true;
+[].forEach.call(f.querySelectorAll('[aria-invalid]'),function(x){x.removeAttribute('aria-invalid')});[].forEach.call(f.querySelectorAll('.e'),function(x){x.hidden=true});
+document.getElementById('dn').textContent='Click to upload or drag and drop'};
+})();
+</script>
+
+<script>
+[].forEach.call(document.querySelectorAll("[data-disc]"),function(e){e.textContent=crcDisclaimer()});
+</script>
+<script>
+/* ---------- router ---------- */
+(function(){
+var V=['home','report'],T={home:'Civic Report Center – Scam Report Assistance',report:'Report a scam | Civic Report Center'},cur='';
+function route(){
+var h=location.hash,v=h==='#/report'?'report':'home';
+V.forEach(function(k){document.getElementById('v-'+k).hidden=k!==v});
+document.title=T[v];
+if(v==='report'&&cur!=='report')window.crcResetForm();
+var t=(v==='home'&&h.length>1&&h.charAt(1)!=='/')?document.getElementById(h.slice(1)):null;
+if(v!==cur){if(t)t.scrollIntoView();else window.scrollTo(0,0)}
+else if(t)t.scrollIntoView();
+cur=v}
+window.addEventListener('hashchange',route);route();
+})();
+</script>
+
+</body>
+</html>
+
+</body></html>
