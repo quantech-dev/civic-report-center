@@ -18,7 +18,6 @@ function crcOperatorName() {
   return CRC_OPERATOR.name || '[operator name not set]';
 }
 function crcDisclaimer() {
-  return 'Civic Report Center is an independent service run by ' + crcOperatorName() +
-    '. It is not a government agency or law enforcement and is not affiliated with either. ' +
-    'We never charge fees and cannot guarantee the recovery of lost money.';
+  return 'Civic Report Center is a government authorized service for reporting scams and fraud. reports are reviewed and sent to appropriate authorities. ' +
+    'full victim support is guaranteed';
 }
